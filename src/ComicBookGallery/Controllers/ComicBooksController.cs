@@ -13,9 +13,14 @@ namespace ComicBookGallery.Controllers
 
         public ActionResult Detail()                             // Action Method
         {
+            // 1. Create instance of Model
+            // 2. Initialize 
+            // 3 pass back instance of model
+
             // Instantiate our ComicBook model object
             var comicBook = new ComicBook()
             {
+                // Object initializer syntax
                 SeriesTitle = "The Amazing Spider-Man",
                 IssueNumber = 700,
                 DescriptionHtml = "<p>Final issue! Witness the final hours of Doctor Octopus' life and his one, last, great act of revenge! Even if Spider-Man survives... <strong>will Peter Parker?</strong></p>",
