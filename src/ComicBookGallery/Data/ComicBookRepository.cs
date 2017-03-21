@@ -14,6 +14,7 @@ namespace ComicBookGallery.Data
             new ComicBook()
             {
                 // Object initializer syntax
+                Id = 1,
                 SeriesTitle = "The Amazing Spider-Man",
                 IssueNumber = 700,
                 DescriptionHtml =
@@ -30,6 +31,7 @@ namespace ComicBookGallery.Data
             },
             new ComicBook()
             {
+                Id = 2,
                 SeriesTitle = "The Amazing Spider-Man",
                 IssueNumber = 657,
                 DescriptionHtml =
@@ -46,6 +48,7 @@ namespace ComicBookGallery.Data
             },
             new ComicBook()
             {
+                Id = 3,
                 SeriesTitle = "Bone",
                 IssueNumber = 50,
                 DescriptionHtml =
@@ -60,22 +63,26 @@ namespace ComicBookGallery.Data
                 Favorite = false
             }
         }; // private static ComicBook[] _comicBooks = new ComicBook[]
-   
 
-    public ComicBook GetComicBook(int id)
-    {
-        ComicBook comicBookToReturn = null;
-        foreach (var comicBook in _comicBooks)
+        //internal object GetComicBook(int? id)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        public ComicBook GetComicBook(int id)
         {
-            if (comicBook.Id == id)
+            ComicBook comicBookToReturn = null;
+            foreach (var comicBook in _comicBooks)
             {
-                comicBookToReturn = comicBook;
-                break;
-            }
-                
-        }
+                if (comicBook.Id == id)
+                {
+                    comicBookToReturn = comicBook;
+                    break;
+                }
 
-        return comicBookToReturn;
-    }
-   } // public class ComicBookRepository
+            }
+
+            return comicBookToReturn;
+        }
+    } // public class ComicBookRepository
 } // namespace ComicBookGallery.Data
